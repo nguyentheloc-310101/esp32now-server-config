@@ -27,7 +27,7 @@ input {
   left: 0;
 }
 
-.signin-signup {
+.form-config-wifi {
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -244,7 +244,7 @@ form.sign-in-form {
   transform: translateX(-800px);
 }
 
-.container.sign-up-mode .signin-signup {
+.container.sign-up-mode .form-config-wifi {
   left: 25%;
 }
 
@@ -276,15 +276,15 @@ form.sign-in-form {
     min-height: 800px;
     height: 100vh;
   }
-  .signin-signup {
+  .form-config-wifi {
     width: 100%;
     top: 95%;
     transform: translate(-50%, -100%);
     transition: 1s 0.8s ease-in-out;
   }
 
-  .signin-signup,
-  .container.sign-up-mode .signin-signup {
+  .form-config-wifi,
+  .container.sign-up-mode .form-config-wifi {
     left: 50%;
   }
 
@@ -368,7 +368,7 @@ form.sign-in-form {
     transform: translateY(300px);
   }
 
-  .container.sign-up-mode .signin-signup {
+  .container.sign-up-mode .form-config-wifi {
     top: 5%;
     transform: translate(-50%, 0);
   }
