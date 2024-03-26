@@ -6,11 +6,11 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0" />
     <link
-      href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css"
+      href="../img/icons/boxicons/boxicons.min.css"
       rel="stylesheet" />
     <link
       rel="stylesheet"
-      href="style.css" />
+      href="../styles/style.css" />
     <title>Smart Home</title>
   </head>
   <body>
@@ -19,11 +19,11 @@
       <a
         href="#"
         class="brand"
-        ><i class="bx bxs-smile icon"></i> SmartHome</a
+        ><i class="bx bxs-network-chart icon"></i> SmartHome</a
       >
       <ul class="side-menu">
         <li>
-          <a href="index.html"
+          <a href="dashboard.html"
             ><i class="bx bxs-dashboard icon"></i> Dashboard</a
           >
         </li>
@@ -41,7 +41,9 @@
           >
         </li>
         <li>
-          <a href="devices.html"><i class="bx bxs-widget icon"></i> Devices</a>
+          <a href="./devices/devices.html"
+            ><i class="bx bxs-widget icon"></i> Devices</a
+          >
         </li>
       </ul>
     </section>
@@ -103,58 +105,54 @@
               <div>Wi-Fi Manager when the ESP is in access point mode</div>
             </div>
             <div class="container">
-                <form
-                  action="/"
-                  class="sign-in-form">
-                  <!-- <h2 class="title">ESP 32 Wifi Manager</h2> -->
-                  <div class="input-field">
-                    <input
-                      type="text"
-                      id="ssid"
-                      name="ssid"
-                      placeholder="Fill your SSID" />
-                  </div>
-                  <div class="input-field">
-                    <input
-                      type="password"
-                      name="pass"
-                      id="pass"
-                      placeholder="Fill your Password" />
-                  </div>
-                  <div class="input-field">
-                    <input
-                      type="text"
-                      id="ip"
-                      name="ip"
-                      placeholder="IP address: 192.168.1.200" />
-                  </div>
-                  <div class="input-field">
-                    <input
-                      type="text"
-                      id="gateway"
-                      name="gateway"
-                      placeholder="Gateway address: 192.168.1.1" />
-                  </div>
-                  <button
-                    type="submit"
-                    class="btn">
-                    Submit
-                  </button>
-                  <p>Please fill out all the fields.</p>
-              </div>
+              <form
+                action="/"
+                class="sign-in-form">
+                <!-- <h2 class="title">ESP 32 Wifi Manager</h2> -->
+                <div class="input-field">
+                  <input
+                    type="text"
+                    id="ssid"
+                    name="ssid"
+                    placeholder="Fill your SSID" />
+                </div>
+                <div class="input-field">
+                  <input
+                    type="password"
+                    name="pass"
+                    id="pass"
+                    placeholder="Fill your Password" />
+                </div>
+                <div class="input-field">
+                  <input
+                    type="text"
+                    id="ip"
+                    name="ip"
+                    placeholder="IP address: 192.168.1.200" />
+                </div>
+                <div class="input-field">
+                  <input
+                    type="text"
+                    id="gateway"
+                    name="gateway"
+                    placeholder="Gateway address: 192.168.1.1" />
+                </div>
+                <button
+                  type="submit"
+                  class="btn">
+                  Submit
+                </button>
+              </form>
+              <!-- Closing form tag was missing here -->
+              <p>Please fill out all the fields.</p>
             </div>
           </div>
-          <!-- <div class="content-data">
-            <div class="head">
-              <h3>Devices Setting</h3>
-            </div>
-             -->
         </div>
       </main>
       <!-- MAIN -->
     </section>
     <!-- NAVBAR -->
 
-    <script src="script.js"></script>
+    <script src="../script.js"></script>
   </body>
 </html>

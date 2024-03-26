@@ -5,112 +5,86 @@
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css"
-      rel="stylesheet" />
+
     <link
       rel="stylesheet"
-      href="style.css" />
-    <title>Smart Home</title>
+      href="../styles/style-form.css" />
+    <title>ESP WEB SERVER</title>
   </head>
   <body>
-    <!-- SIDEBAR -->
-    <section id="sidebar">
-      <a
-        href="#"
-        class="brand"
-        ><i class="bx bxs-smile icon"></i> SmartHome</a
-      >
-      <ul class="side-menu">
-        <li>
-          <a
-            href="#"
-            class="active"
-            ><i class="bx bxs-dashboard icon"></i> Dashboard</a
-          >
-        </li>
-        <li
-          class="divider"
-          data-text="Settings">
-          Settings
-        </li>
-
-        <li>
-          <a href="wifi-config.html"><i class="bx bxs-chart icon"></i>Wifi</a>
-        </li>
-        <li>
-          <a href="devices.html"><i class="bx bxs-widget icon"></i> Devices</a>
-        </li>
-      </ul>
-    </section>
-    <!-- SIDEBAR -->
-
-    <!-- NAVBAR -->
-    <section id="content">
-      <!-- NAVBAR -->
-      <nav>
-        <i class="bx bx-menu toggle-sidebar"></i>
-        <form action="#">
-          <div class="form-group">
-            <input
-              type="text"
-              placeholder="Search..." />
-            <i class="bx bx-search icon"></i>
-          </div>
-        </form>
-
-        <span class="divider"></span>
-        <div class="profile">
-          <img
-            src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8cGVvcGxlfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-            alt="" />
-          <ul class="profile-link">
-            <li>
-              <a href="#"><i class="bx bxs-user-circle icon"></i> Profile</a>
-            </li>
-            <li>
-              <a href="#"><i class="bx bxs-cog"></i> Settings</a>
-            </li>
-            <li>
-              <a href="#"><i class="bx bxs-log-out-circle"></i> Logout</a>
-            </li>
-          </ul>
+    <div class="container">
+      <div class="forms-container">
+        <div class="form-config-wifi">
+          <form
+            action="./pages/dashboard.html"
+            class="information-wifi-form">
+            <h2 class="title">ESP 32 Wifi Manager</h2>
+            <div class="input-field">
+              <input
+                required
+                type="text"
+                id="ssid"
+                name="ssid"
+                placeholder="Fill your SSID" />
+            </div>
+            <div class="input-field">
+              <input
+                required
+                type="password"
+                name="pass"
+                id="pass"
+                placeholder="Fill your Password" />
+            </div>
+            <div class="input-field">
+              <input
+                required
+                type="text"
+                id="ip"
+                name="ip"
+                placeholder="IP address: 192.168.1.200" />
+            </div>
+            <div class="input-field">
+              <input
+                required
+                type="text"
+                id="gateway"
+                name="gateway"
+                placeholder="Gateway address: 192.168.1.1" />
+            </div>
+            <button
+              id="button-submit-index"
+              type="submit"
+              class="btn">
+              Submit
+            </button>
+            <p>Please fill out all the fields.</p>
+          </form>
         </div>
-      </nav>
-      <!-- NAVBAR -->
+      </div>
 
-      <!-- MAIN -->
-      <main>
-        <h1 class="title">Dashboard</h1>
-        <ul class="breadcrumbs">
-          <li><a href="#">Home</a></li>
-          <li class="divider">/</li>
-          <li>
-            <a
-              href="#"
-              class="active"
-              >Dashboard</a
-            >
-          </li>
-        </ul>
-
-        <!-- <div class="data">
-          <div class="content-data">
-            <div class="head">
-              <h3>Wifi config</h3>
-              <div></div>
-            </div>
+      <div class="panels-container">
+        <div class="panel left-panel">
+          <div class="content">
+            <h3>ESP 32 Wifi Manager</h3>
+            <p>Wi-Fi Manager when the ESP is in access point mode</p>
           </div>
-          <div class="content-data">
-            <div class="head">
-              <h3>Devices Setting</h3>
-            </div>
-        </div> -->
-      </main>
-      <!-- MAIN -->
-    </section>
-    <!-- NAVBAR -->
+          <img
+            src="img/log.svg"
+            class="image"
+            alt="" />
+        </div>
+      </div>
+    </div>
 
-    <script src="script.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const buttonSubmitIndex = document.getElementById(
+          'button-submit-index'
+        );
+        buttonSubmitIndex.addEventListener('click', () => {
+          console.log('hello');
+        });
+      });
+    </script>
   </body>
 </html>

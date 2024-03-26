@@ -6,11 +6,11 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0" />
     <link
-      href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css"
+      href="../img/icons/boxicons/boxicons.min.css"
       rel="stylesheet" />
     <link
       rel="stylesheet"
-      href="style.css" />
+      href="../styles/style.css" />
     <title>Smart Home</title>
   </head>
   <body>
@@ -19,11 +19,15 @@
       <a
         href="#"
         class="brand"
-        ><i class="bx bxs-smile icon"></i> SmartHome</a
+        ><i class="bx bxs-network-chart icon"></i> SmartHome</a
       >
       <ul class="side-menu">
         <li>
-          <a href="index.html"><i class="bx bxs-dashboard icon"></i> Dashboard</a>
+          <a
+            href="dashboard.html"
+            class="active"
+            ><i class="bx bxs-dashboard icon"></i> Dashboard</a
+          >
         </li>
         <li
           class="divider"
@@ -32,15 +36,12 @@
         </li>
 
         <li>
-          <a
-            href="wifi-config.html"
-          
-            ><i class="bx bxs-chart icon"></i>Wifi</a
-          >
+          <a href="wifi-config.html"><i class="bx bxs-chart icon"></i>Wifi</a>
         </li>
         <li>
-          <a href="devices.html" 
-            class="active"><i class="bx bxs-widget icon"></i> Devices</a>
+          <a href="./devices/devices.html"
+            ><i class="bx bxs-widget icon"></i> Devices</a
+          >
         </li>
       </ul>
     </section>
@@ -82,7 +83,7 @@
 
       <!-- MAIN -->
       <main>
-        <h1 class="title">Devices Manager</h1>
+        <h1 class="title">Dashboard</h1>
         <ul class="breadcrumbs">
           <li><a href="#">Home</a></li>
           <li class="divider">/</li>
@@ -90,88 +91,28 @@
             <a
               href="#"
               class="active"
-              >Devices</a
+              >Dashboard</a
             >
           </li>
         </ul>
 
-        <div class="data">
-          <!-- <div class="content-data">
+        <!-- <div class="data">
+          <div class="content-data">
             <div class="head">
               <h3>Wifi config</h3>
               <div></div>
             </div>
-          </div> -->
-          <!-- <div class="content-data">
+          </div>
+          <div class="content-data">
             <div class="head">
               <h3>Devices Setting</h3>
             </div>
-            
         </div> -->
-        <div class="table-data">
-				<div class="devices">
-					<div class="head">
-						<h3>All devices</h3>
-						<i class='bx bx-search' ></i>
-						<i class='bx bx-filter' ></i>
-					</div>
-					<table>
-						<thead>
-							<tr>
-								<th>Device name</th>
-								<th>Date record</th>
-								<th>Status</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>
-									<img src="img/motor.png">
-									<p>motor pumping</p>
-								</td>
-								<td>01-10-2021</td>
-								<td><span class="status completed">Activate</span></td>
-							</tr>
-							<tr>
-								<td>
-									<img src="img/motor.png">
-									<p>motor pumping</p>
-								</td>
-								<td>01-10-2021</td>
-								<td><span class="status pending">Inactive</span></td>
-							</tr>
-							<tr>
-								<td>
-									<img src="img/motor.png">
-									<p>motor pumping</p>
-								</td>
-								<td>01-10-2021</td>
-								<td><span class="status process">Process</span></td>
-							</tr>
-							<tr>
-								<td>
-									<img src="img/motor.png">
-									<p>motor pumping</p>
-								</td>
-								<td>01-10-2021</td>
-								<td><span class="status pending">Inactive</span></td>
-							</tr>
-							<tr>
-								<td>
-									<img src="img/motor.png">
-									<p>motor pumping</p>
-								</td>
-								<td>01-10-2021</td>
-								<td><span class="status completed">Activate</span></td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
       </main>
       <!-- MAIN -->
     </section>
     <!-- NAVBAR -->
 
-    <script src="script.js"></script>
+    <script src="../script.js"></script>
   </body>
 </html>

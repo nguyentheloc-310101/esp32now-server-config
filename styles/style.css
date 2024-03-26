@@ -611,73 +611,29 @@ main .btn-send:hover {
   color: var(--dark);
 }
 #content main .table-data > div {
-  border-radius: 20px;
+  border-radius: 12px;
   background: var(--light);
   padding: 24px;
   overflow-x: auto;
 }
-#content main .table-data .head {
-  display: flex;
-  align-items: center;
-  grid-gap: 16px;
-  margin-bottom: 24px;
-}
-#content main .table-data .head h3 {
-  margin-right: auto;
-  font-size: 24px;
-  font-weight: 600;
-}
-#content main .table-data .head .bx {
-  cursor: pointer;
+
+table th {
+  padding: 10px 0;
+  background-color: #f4f4f4;
+  /* background-color: #fff; */
+  border: thin solid #d4d4d4;
 }
 
-#content main .table-data .devices {
-  flex-grow: 1;
-  flex-basis: 500px;
+table td {
+  padding: 10px;
+  border: thin solid #d4d4d4;
+  width: 18%;
+  text-align: center;
+  background-color: #fff;
 }
-#content main .table-data .devices table {
-  width: 100%;
-  border-collapse: collapse;
-}
-#content main .table-data .devices table th {
-  padding-bottom: 12px;
-  font-size: 13px;
-  text-align: left;
-  border-bottom: 1px solid var(--grey);
-}
-#content main .table-data .devices table td {
-  padding: 16px 0;
-}
-#content main .table-data .devices table tr td:first-child {
-  display: flex;
-  align-items: center;
-  grid-gap: 12px;
-  padding-left: 6px;
-}
-#content main .table-data .devices table td img {
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  object-fit: cover;
-}
-#content main .table-data .devices table tbody tr:hover {
-  background: var(--grey);
-}
-#content main .table-data .devices table tr td .status {
-  font-size: 10px;
-  padding: 6px 16px;
-  color: var(--light);
-  border-radius: 20px;
-  font-weight: 700;
-}
-#content main .table-data .devices table tr td .status.completed {
-  background: var(--blue);
-}
-#content main .table-data .devices table tr td .status.process {
-  background: var(--yellow);
-}
-#content main .table-data .devices table tr td .status.pending {
-  background: var(--orange);
+
+table img {
+  width: 50%;
 }
 
 @media screen and (max-width: 768px) {
