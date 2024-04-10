@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <!-- <link
+      href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css"
+      rel="stylesheet" /> -->
+    <!-- My CSS -->
+    <link
+      rel="stylesheet"
+      href="../../index.css" />
+    <link
+      rel="stylesheet"
+      href="wifi-config.css" />
+    <title>Smart Home</title>
+  </head>
+  <body>
+    <!-- SIDEBAR -->
+    <section id="sidebar">
+      <a
+        href="#"
+        class="brand">
+        <img
+          class="logo"
+          src="../../../public/images/logo2.png" />
+        <span class="text">Smart Home</span>
+      </a>
+      <ul class="side-menu top">
+        <li>
+          <a href="../home/home.html">
+            <img
+              class="bx sidebar-icon"
+              src="../../../public/icons/bxs-dashboard.svg" />
+            <span class="text">Dashboard</span>
+          </a>
+        </li>
+        <li>
+          <a href="../devices/devices.html">
+            <img
+              class="bx sidebar-icon"
+              src="../../../public/icons/bx-devices.svg" />
+            <span class="text">Devices</span>
+          </a>
+        </li>
+        <li class="active">
+          <a href="../wifi-config/wifi-config.html">
+            <img
+              class="bx sidebar-icon"
+              src="../../../public/icons/bx-wifi.svg" />
+            <span class="text">Wifi configuration</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+    <!-- SIDEBAR -->
+
+    <!-- CONTENT -->
+    <section id="content">
+      <!-- NAVBAR -->
+      <nav>
+        <i class="bx bx-menu">
+          <img
+            class="bx sidebar-icon"
+            src="../../../public/icons/bx-menu.svg" />
+        </i>
+        <a
+          href="#"
+          class="nav-link"
+          >Back to config</a
+        >
+        <form action="#">
+          <div class="form-input">
+            <input
+              type="search"
+              placeholder="Search..." />
+            <button
+              type="submit"
+              class="search-btn">
+              <img
+                class="bx sidebar-icon"
+                src="../../../public/icons/bx-search.svg" />
+            </button>
+          </div>
+        </form>
+        <input
+          type="checkbox"
+          id="switch-mode"
+          hidden />
+        <label
+          for="switch-mode"
+          class="switch-mode"></label>
+        <a
+          href="#"
+          class="notification">
+          <i class="bx bxs-bell"></i>
+          <span class="num">8</span>
+        </a>
+        <a
+          href="#"
+          class="profile">
+          <img src="img/people.png" />
+        </a>
+      </nav>
+      <!-- NAVBAR -->
+
+      <!-- MAIN -->
+      <main>
+        <div>Data here</div>
+      </main>
+      <!-- MAIN -->
+    </section>
+    <!-- CONTENT -->
+
+    <script src="../../index.js"></script>
+    <script src="wifi-config.js"></script>
+  </body>
+</html>
