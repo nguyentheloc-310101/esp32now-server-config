@@ -69,18 +69,7 @@
           >Back to config</a
         >
         <form action="#">
-          <div class="form-input">
-            <input
-              type="search"
-              placeholder="Search..." />
-            <button
-              type="submit"
-              class="search-btn">
-              <img
-                class="bx sidebar-icon"
-                src="../../../public/icons/bx-search.svg" />
-            </button>
-          </div>
+          <div class="form-input"></div>
         </form>
         <input
           type="checkbox"
@@ -132,6 +121,7 @@
 
         <div>Data here</div>
       </main> -->
+
       <main
         class="table"
         id="customers_table">
@@ -145,50 +135,52 @@
               src="../../../public/images/search.png"
               alt="" />
           </div>
-          <div class="export__file">
-            <label
-              for="export-file"
-              class="export__file-btn"
-              title="Export File"></label>
-            <input
-              type="checkbox"
-              id="export-file" />
-            <div class="export__file-options">
-              <label>Export As &nbsp; &#10140;</label>
-              <label
-                for="export-file"
-                id="toPDF"
-                >PDF
-                <img
-                  src="../../../public/images/pdf.png"
-                  alt=""
-              /></label>
-              <label
-                for="export-file"
-                id="toJSON"
-                >JSON
-                <img
-                  src="../../../public/images/json.png"
-                  alt=""
-              /></label>
-              <label
-                for="export-file"
-                id="toCSV"
-                >CSV
-                <img
-                  src="../../../public/images/csv.png"
-                  alt=""
-              /></label>
-              <label
-                for="export-file"
-                id="toEXCEL"
-                >EXCEL
-                <img
-                  src="../../../public/images/excel.png"
-                  alt=""
-              /></label>
+          <!-- Add New Device Modal -->
+          <div
+            id="addDeviceModal"
+            class="modal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <h2>Add New Device</h2>
+              <form id="addDeviceForm">
+                <label for="deviceId">ID:</label>
+                <input
+                  type="text"
+                  id="deviceId"
+                  name="deviceId"
+                  required /><br />
+                <label for="deviceName">Name:</label>
+                <input
+                  type="text"
+                  id="deviceName"
+                  name="deviceName"
+                  required /><br />
+                <label for="deviceLocation">Location:</label>
+                <input
+                  type="text"
+                  id="deviceLocation"
+                  name="deviceLocation"
+                  required /><br />
+                <label for="deviceDate">Date Connect:</label>
+                <input
+                  type="date"
+                  id="deviceDate"
+                  name="deviceDate"
+                  required /><br />
+                <label for="deviceStatus">Status:</label>
+                <select
+                  id="deviceStatus"
+                  name="deviceStatus"
+                  required>
+                  <option value="Active">Active</option>
+                  <option value="Off">Off</option></select
+                ><br />
+                <button type="submit">Add Device</button>
+              </form>
             </div>
           </div>
+
+          <button id="addDeviceBtn">Add new devices</button>
         </section>
         <section class="table__body">
           <table>
@@ -199,130 +191,11 @@
                 <th>Location <span class="icon-arrow">&UpArrow;</span></th>
                 <th>Date Connect <span class="icon-arrow">&UpArrow;</span></th>
                 <th>Status <span class="icon-arrow">&UpArrow;</span></th>
-                <th>Consumption <span class="icon-arrow">&UpArrow;</span></th>
+                <th>Control <span class="icon-arrow">&UpArrow;</span></th>
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>1</td>
-                <td>Laptop</td>
-                <td>Seoul</td>
-                <td>17 Dec, 2022</td>
-                <td>
-                  <p class="status delivered">Active</p>
-                </td>
-                <td><strong> 128</strong></td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>Air conditioner</td>
-                <td>Kathmandu</td>
-                <td>27 Aug, 2023</td>
-                <td>
-                  <p class="status cancelled">Cancelled</p>
-                </td>
-                <td><strong>5350</strong></td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td>Light</td>
-                <td>Tokyo</td>
-                <td>14 Mar, 2023</td>
-                <td>
-                  <p class="status delivered">Active</p>
-                </td>
-                <td><strong>210</strong></td>
-              </tr>
-              <tr>
-                <td>4</td>
-                <td>Printer</td>
-                <td>New Delhi</td>
-                <td>25 May, 2023</td>
-                <td>
-                  <p class="status delivered">Active</p>
-                </td>
-                <td><strong>149</strong></td>
-              </tr>
-              <tr>
-                <td>5</td>
-                <td>Asus PC</td>
-                <td>Paris</td>
-                <td>23 Apr, 2023</td>
-                <td>
-                  <p class="status pending">Pending</p>
-                </td>
-                <td><strong>399</strong></td>
-              </tr>
-              <tr>
-                <td>6</td>
-                <td>Owen</td>
-                <td>London</td>
-                <td>23 Apr, 2023</td>
-                <td>
-                  <p class="status cancelled">Cancelled</p>
-                </td>
-                <td><strong>399</strong></td>
-              </tr>
-              <tr>
-                <td>7</td>
-                <td>Fan</td>
-                <td>New York</td>
-                <td>20 May, 2023</td>
-                <td>
-                  <p class="status delivered">Active</p>
-                </td>
-                <td><strong>399</strong></td>
-              </tr>
-              <tr>
-                <td>8</td>
-                <td>Mobile Phone</td>
-                <td>Islamabad</td>
-                <td>30 Feb, 2023</td>
-                <td>
-                  <p class="status pending">Pending</p>
-                </td>
-                <td><strong>149</strong></td>
-              </tr>
-              <tr>
-                <td>9</td>
-                <td>Acer Laptop</td>
-                <td>Dhaka</td>
-                <td>22 Dec, 2023</td>
-                <td>
-                  <p class="status cancelled">Cancelled</p>
-                </td>
-                <td><strong>240</strong></td>
-              </tr>
-              <tr>
-                <td>10</td>
-                <td>Dell Laptop</td>
-                <td>Dhaka</td>
-                <td>22 Dec, 2023</td>
-                <td>
-                  <p class="status cancelled">Cancelled</p>
-                </td>
-                <td><strong>249</strong></td>
-              </tr>
-              <tr>
-                <td>11</td>
-                <td>Xiaomi Phone</td>
-                <td>Dhaka</td>
-                <td>22 Dec, 2023</td>
-                <td>
-                  <p class="status cancelled">Cancelled</p>
-                </td>
-                <td><strong>240</strong></td>
-              </tr>
-              <tr>
-                <td>9</td>
-                <td>Alson GC</td>
-                <td>Dhaka</td>
-                <td>22 Dec, 2023</td>
-                <td>
-                  <p class="status cancelled">Cancelled</p>
-                </td>
-                <td><strong>240</strong></td>
-              </tr>
+              <!-- Table body content will be added dynamically -->
             </tbody>
           </table>
         </section>
@@ -333,5 +206,153 @@
 
     <script src="../../index.js"></script>
     <script src="devices.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const tbody = document.querySelector('tbody');
+
+        // Event listener for toggle switches using event delegation
+        tbody.addEventListener('change', function (event) {
+          if (event.target.classList.contains('toggle-input')) {
+            console.log('Switch toggled');
+            const toggleInput = event.target;
+            const value = toggleInput.checked ? 'Active' : 'Off'; // Updating the status based on switch state
+            const id = toggleInput.id.replace('toggle-', ''); // Extracting the ID from the toggle ID
+            const statusElement =
+              toggleInput.parentElement.parentElement.previousElementSibling.querySelector(
+                '.status'
+              );
+
+            // Update status in table
+            statusElement.textContent = value;
+            statusElement.className = `status ${value.toLowerCase()}`;
+
+            // Update status in JSON data
+            fetch('data.json')
+              .then((response) => response.json())
+              .then((data) => {
+                const itemToUpdate = data.find((item) => item.id == id);
+                if (itemToUpdate) {
+                  itemToUpdate.status = value;
+                }
+                return data;
+              })
+              .then((updatedData) => {
+                // Send updated JSON data back to the server (optional)
+                // const updatedJson = JSON.stringify(updatedData);
+                // fetch('updateData.php', {
+                //     method: 'POST',
+                //     body: updatedJson,
+                //     headers: {
+                //         'Content-Type': 'application/json'
+                //     }
+                // });
+              })
+              .catch((error) => {
+                console.error('Error updating data:', error);
+              });
+          }
+        });
+
+        // Load initial data
+        fetch('data.json')
+          .then((response) => response.json())
+          .then((data) => {
+            data.forEach((item) => {
+              const row = document.createElement('tr');
+              row.innerHTML = `
+                        <td>${item.id}</td>
+                        <td>${item.name}</td>
+                        <td>${item.location}</td>
+                        <td>${item.date}</td>
+                        <td>
+                            <p class="status ${item.status.toLowerCase()}">${
+                item.status
+              }</p>
+                        </td>
+                        <td>
+                            <div class="toggle-switch">
+                                <input type="checkbox" class="toggle-input" id="toggle-${
+                                  item.id
+                                }" ${item.status === 'Active' ? 'checked' : ''}>
+                                <label for="toggle-${
+                                  item.id
+                                }" class="toggle-label"></label>
+                            </div>
+                        </td>
+                    `;
+              tbody.appendChild(row);
+            });
+          })
+          .catch((error) => {
+            console.error('Error loading data:', error);
+          });
+      });
+      //Add New Devices
+      document.addEventListener('DOMContentLoaded', function () {
+        // Get the modal
+        const modal = document.getElementById('addDeviceModal');
+
+        // Get the button that opens the modal
+        const btn = document.getElementById('addDeviceBtn');
+
+        // Get the <span> element that closes the modal
+        const span = document.getElementsByClassName('close')[0];
+
+        // When the user clicks the button, open the modal
+        btn.addEventListener('click', function () {
+          modal.style.display = 'block';
+        });
+
+        // When the user clicks on <span> (x), close the modal
+        span.addEventListener('click', function () {
+          modal.style.display = 'none';
+        });
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.addEventListener('click', function (event) {
+          if (event.target === modal) {
+            modal.style.display = 'none';
+          }
+        });
+
+        // Handle form submission
+        const form = document.getElementById('addDeviceForm');
+        form.addEventListener('submit', function (event) {
+          event.preventDefault();
+          const formData = new FormData(form);
+          const newDevice = {};
+          formData.forEach((value, key) => {
+            newDevice[key] = value;
+          });
+          addDeviceToTable(newDevice);
+          modal.style.display = 'none';
+        });
+
+        // Function to add new device to the table
+        function addDeviceToTable(device) {
+          const tbody = document.querySelector('tbody');
+          const row = document.createElement('tr');
+          const status = device.deviceStatus; // Corrected to extract device status from form data
+          row.innerHTML = `
+    <td>${device.deviceId}</td>
+    <td>${device.deviceName}</td>
+    <td>${device.deviceLocation}</td>
+    <td>${device.deviceDate}</td>
+    <td>
+      <p class="status ${status.toLowerCase()}">${status}</p>
+    </td>
+    <td>
+      <div class="toggle-switch">
+        <input type="checkbox" class="toggle-input" id="toggle-${
+          device.deviceId
+        }" ${status === 'Active' ? 'checked' : ''}>
+        <label for="toggle-${device.deviceId}" class="toggle-label"></label>
+      </div>
+    </td>
+  `;
+          tbody.appendChild(row);
+        }
+      });
+    </script>
   </body>
 </html>

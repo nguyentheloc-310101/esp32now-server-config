@@ -1,0 +1,86 @@
+[
+  {
+    "id": 1,
+    "name": "Laptop",
+    "location": "Seoul",
+    "date": "17 Dec, 2022",
+    "status": "Active"
+  },
+  {
+    "id": 2,
+    "name": "Air conditioner",
+    "location": "Kathmandu",
+    "date": "27 Aug, 2023",
+    "status": "Off"
+  },
+  {
+    "id": 3,
+    "name": "Light",
+    "location": "Tokyo",
+    "date": "14 Mar, 2023",
+    "status": "Active"
+  },
+  {
+    "id": 4,
+    "name": "Printer",
+    "location": "New Delhi",
+    "date": "25 May, 2023",
+    "status": "Active"
+  },
+  {
+    "id": 5,
+    "name": "Asus PC",
+    "location": "Paris",
+    "date": "23 Apr, 2023",
+    "status": "Active"
+  },
+  {
+    "id": 6,
+    "name": "Owen",
+    "location": "London",
+    "date": "23 Apr, 2023",
+    "status": "Off"
+  },
+  {
+    "id": 7,
+    "name": "Fan",
+    "location": "New York",
+    "date": "20 May, 2023",
+    "status": "Active"
+  },
+  {
+    "id": 8,
+    "name": "Mobile Phone",
+    "location": "Islamabad",
+    "date": "30 Feb, 2023",
+    "status": "Active"
+  },
+  {
+    "id": 9,
+    "name": "Acer Laptop",
+    "location": "Dhaka",
+    "date": "22 Dec, 2023",
+    "status": "Off"
+  },
+  {
+    "id": 10,
+    "name": "Dell Laptop",
+    "location": "Dhaka",
+    "date": "22 Dec, 2023",
+    "status": "Off"
+  },
+  {
+    "id": 11,
+    "name": "Xiaomi Phone",
+    "location": "Dhaka",
+    "date": "22 Dec, 2023",
+    "status": "Off"
+  },
+  {
+    "id": 12,
+    "name": "Alson GC",
+    "location": "Dhaka",
+    "date": "22 Dec, 2023",
+    "status": "Off"
+  }
+]
