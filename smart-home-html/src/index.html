@@ -1,90 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="utf-8" />
+    <title>RegistrationForm_v1 by Colorlib</title>
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0" />
 
+    <!-- MATERIAL DESIGN ICONIC FONT -->
     <link
       rel="stylesheet"
-      href="index.css" />
-    <title>ESP WEB SERVER</title>
+      href="fonts/material-design-iconic-font/css/material-design-iconic-font.min.css" />
+
+    <!-- STYLE CSS -->
+    <link
+      rel="stylesheet"
+      href="css/style.css" />
   </head>
+
   <body>
-    <div class="container">
-      <div class="forms-container">
-        <div class="form-config-wifi">
-          <form
-            action="./pages/home/home.html"
-            class="information-wifi-form">
-            <h2 class="title">ESP 32 Wifi Manager</h2>
-            <div class="input-field">
-              <input
-                required
-                type="text"
-                id="ssid"
-                name="ssid"
-                placeholder="Fill your SSID" />
-            </div>
-            <div class="input-field">
+    <div
+      class="wrapper"
+      style="background-image: url('images/bg-registration-form-2.jpg')">
+      <div class="inner">
+        <div class="image-holder">
+          <img
+            src="images/wifi-small.jpg"
+            alt="" />
+        </div>
+        <form action="./pages/home/home.html">
+          <h3>ESP32 Wifi Manager</h3>
+          <div>
+            <div class="form-wrapper">
               <input
                 required
                 type="password"
                 name="pass"
                 id="pass"
-                placeholder="Fill your Password" />
+                placeholder="Fill your Password"
+                class="form-control" />
+              <i class="zmdi zmdi-account"></i>
             </div>
-            <div class="input-field">
-              <input
-                required
-                type="text"
-                id="ip"
-                name="ip"
-                placeholder="IP address: 192.168.1.200" />
-            </div>
-            <div class="input-field">
-              <input
-                required
-                type="text"
-                id="gateway"
-                name="gateway"
-                placeholder="Gateway address: 192.168.1.1" />
-            </div>
-            <button
-              id="button-submit-index"
-              type="submit"
-              class="btn">
-              Submit
-            </button>
-            <p>Please fill out all the fields.</p>
-          </form>
-        </div>
-      </div>
 
-      <div class="panels-container">
-        <div class="panel left-panel">
-          <div class="content">
-            <h3>ESP 32 Wifi Manager</h3>
-            <p>Wi-Fi Manager when the ESP is in access point mode</p>
+            <button>
+              Submit
+              <i class="zmdi zmdi-arrow-right"></i>
+            </button>
           </div>
-          <img
-            src="img/log.svg"
-            class="image"
-            alt="" />
-        </div>
+          <div class="wifi-connected-status">
+            Connected to:<span class="wifi-name">The Coffee House</span>
+          </div>
+        </form>
       </div>
     </div>
-
-    <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        const buttonSubmitIndex = document.getElementById(
-          'button-submit-index'
-        );
-        buttonSubmitIndex.addEventListener('click', () => {
-          console.log('hello');
-        });
-      });
-    </script>
   </body>
+  <!-- This templates was made by Colorlib (https://colorlib.com) -->
 </html>

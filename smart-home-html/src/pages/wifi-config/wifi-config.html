@@ -5,10 +5,7 @@
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0" />
-    <!-- <link
-      href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css"
-      rel="stylesheet" /> -->
-    <!-- My CSS -->
+
     <link
       rel="stylesheet"
       href="../../index.css" />
@@ -108,7 +105,81 @@
 
       <!-- MAIN -->
       <main>
-        <div>Data here</div>
+        <!-- <div class="container-form-wifi-config"> -->
+        <form class="container-lv1">
+          <div>
+            <h2 class="title-big">ESP32 Wifi configuration</h2>
+            <p class="sub-big-title">Information of your wifi.</p>
+
+            <div class="bg-form-input">
+              <div class="bg-form-input-lv1">
+                <div class="text-gray-600">
+                  <p class="text-title-small">Wifi Details</p>
+                  <p>Please fill out all the fields.</p>
+                </div>
+
+                <div class="responsive-lv1">
+                  <div class="form-lv1">
+                    <div class="md-col-span-5">
+                      <label for="full_name">SSID</label>
+                      <input
+                        required
+                        type="text"
+                        id="ssid"
+                        name="ssid"
+                        placeholder="Fill your SSID"
+                        class="input-form-item" />
+                    </div>
+
+                    <div class="md-col-span-5">
+                      <label for="email">Password</label>
+                      <input
+                        required
+                        type="password"
+                        name="pass"
+                        id="pass"
+                        class="input-form-item"
+                        placeholder="Fill your Password" />
+                    </div>
+
+                    <div class="md-col-span-3">
+                      <label for="address">IP address</label>
+                      <input
+                        required
+                        type="text"
+                        id="ip"
+                        name="ip"
+                        placeholder="IP address: 192.168.1.200"
+                        class="input-form-item" />
+                    </div>
+
+                    <div class="md-col-span-2">
+                      <label for="city">Gateway address</label>
+                      <input
+                        required
+                        type="text"
+                        id="gateway"
+                        class="input-form-item"
+                        name="gateway"
+                        placeholder="Gateway address: 192.168.1.1" />
+                    </div>
+
+                    <div class="md-col-span-5 text-right">
+                      <div class="form-wifi-config-button-css-position">
+                        <button
+                          class="button-primary"
+                          type="submit">
+                          Submit
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+        <!-- </div> -->
       </main>
       <!-- MAIN -->
     </section>
