@@ -2,85 +2,97 @@
   {
     "id": 1,
     "name": "Laptop",
-    "location": "Seoul",
-    "date": "17 Dec, 2022",
-    "status": "Active"
+    "unit": "",
+    "type": "device",
+    "status": "Active",
+    "mac": "DE:AD:BE:EF:00:01"
   },
   {
     "id": 2,
-    "name": "Air conditioner",
-    "location": "Kathmandu",
-    "date": "27 Aug, 2023",
-    "status": "Off"
+    "name": "Temperature Sensor",
+    "unit": "°C",
+    "type": "sensor",
+    "status": "Off",
+    "mac": "AB:CD:EF:12:34:56"
   },
   {
     "id": 3,
-    "name": "Light",
-    "location": "Tokyo",
-    "date": "14 Mar, 2023",
-    "status": "Active"
+    "name": "Light Bulb",
+    "unit": "",
+    "type": "device",
+    "status": "Active",
+    "mac": "F0:0D:BA:DC:00:0F"
   },
   {
     "id": 4,
     "name": "Printer",
-    "location": "New Delhi",
-    "date": "25 May, 2023",
-    "status": "Active"
+    "unit": "",
+    "type": "device",
+    "status": "Active",
+    "mac": "12:34:56:78:9A:BC"
   },
   {
     "id": 5,
     "name": "Asus PC",
-    "location": "Paris",
-    "date": "23 Apr, 2023",
-    "status": "Active"
+    "unit": "",
+    "type": "device",
+    "status": "Active",
+    "mac": "23:45:67:89:AB:CD"
   },
   {
     "id": 6,
-    "name": "Owen",
-    "location": "London",
-    "date": "23 Apr, 2023",
-    "status": "Off"
+    "name": "Motion Sensor",
+    "unit": "m",
+    "type": "sensor",
+    "status": "Off",
+    "mac": "EF:CD:AB:78:56:34"
   },
   {
     "id": 7,
-    "name": "Fan",
-    "location": "New York",
-    "date": "20 May, 2023",
-    "status": "Active"
+    "name": "Ceiling Fan",
+    "unit": "",
+    "type": "device",
+    "status": "Active",
+    "mac": "BA:98:76:54:32:10"
   },
   {
     "id": 8,
     "name": "Mobile Phone",
-    "location": "Islamabad",
-    "date": "30 Feb, 2023",
-    "status": "Active"
+    "unit": "",
+    "type": "device",
+    "status": "Active",
+    "mac": "ED:CB:A9:87:65:43"
   },
   {
     "id": 9,
     "name": "Acer Laptop",
-    "location": "Dhaka",
-    "date": "22 Dec, 2023",
-    "status": "Off"
+    "unit": "",
+    "type": "device",
+    "status": "Off",
+    "mac": "FE:DC:BA:98:76:54"
   },
   {
     "id": 10,
-    "name": "Dell Laptop",
-    "location": "Dhaka",
-    "date": "22 Dec, 2023",
-    "status": "Off"
+    "name": "Temperature Sensor",
+    "unit": "°F",
+    "type": "sensor",
+    "status": "Off",
+    "mac": "DC:FE:BA:98:76:54"
   },
   {
     "id": 11,
     "name": "Xiaomi Phone",
-    "location": "Dhaka",
-    "date": "22 Dec, 2023",
-    "status": "Off"
+    "unit": "",
+    "type": "device",
+    "status": "Off",
+    "mac": "0F:ED:CB:A9:87:65"
   },
   {
     "id": 12,
     "name": "Alson GC",
-    "location": "Dhaka",
-    "date": "22 Dec, 2023",
-    "status": "Off"
+    "unit": "",
+    "type": "device",
+    "status": "Off",
+    "mac": "1A:2B:3C:4D:5E:6F"
   }
 ]

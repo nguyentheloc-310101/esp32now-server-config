@@ -142,56 +142,83 @@
             <div class="modal-content">
               <span class="close">&times;</span>
               <h2>Add New Device</h2>
-              <form id="addDeviceForm">
-                <label for="deviceId">ID:</label>
-                <input
-                  type="text"
-                  id="deviceId"
-                  name="deviceId"
-                  required /><br />
-                <label for="deviceName">Name:</label>
-                <input
-                  type="text"
-                  id="deviceName"
-                  name="deviceName"
-                  required /><br />
-                <label for="deviceLocation">Location:</label>
-                <input
-                  type="text"
-                  id="deviceLocation"
-                  name="deviceLocation"
-                  required /><br />
-                <label for="deviceDate">Date Connect:</label>
-                <input
-                  type="date"
-                  id="deviceDate"
-                  name="deviceDate"
-                  required /><br />
-                <label for="deviceStatus">Status:</label>
-                <select
-                  id="deviceStatus"
-                  name="deviceStatus"
-                  required>
-                  <option value="Active">Active</option>
-                  <option value="Off">Off</option></select
-                ><br />
-                <button type="submit">Add Device</button>
+              <form
+                id="addDeviceForm"
+                class="form-add-device">
+                <div class="content-form-add">
+                  <div class="form-group">
+                    <label>Type of device </label>
+                    <select
+                      class="form-control"
+                      id="deviceType"
+                      name="deviceType"
+                      required>
+                      <option value="Device">Device</option>
+                      <option value="Sensor">Sensor</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      id="deviceName"
+                      name="deviceName"
+                      required="required"
+                      class="form-control" />
+                    <label class="form-label">Name devices</label>
+                  </div>
+
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      id="deviceMacAddress"
+                      name="deviceMacAddress"
+                      required="required"
+                      class="form-control" />
+                    <label
+                      for="deviceDate"
+                      class="form-label"
+                      >MAC address:</label
+                    >
+                  </div>
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      id="deviceUnit"
+                      name="deviceUnit"
+                      required="required"
+                      class="form-control" />
+                    <label class="form-label">Unit of devices </label>
+                  </div>
+                </div>
+
+                <div class="bottom-button">
+                  <button
+                    type="submit"
+                    class="button-10">
+                    Add Device
+                  </button>
+                </div>
               </form>
             </div>
           </div>
 
-          <button id="addDeviceBtn">Add new devices</button>
+          <button
+            id="addDeviceBtn"
+            class="button-primary">
+            New &plus;
+          </button>
         </section>
         <section class="table__body">
           <table>
             <thead>
               <tr>
-                <th>Id <span class="icon-arrow">&UpArrow;</span></th>
-                <th>Devices name <span class="icon-arrow">&UpArrow;</span></th>
-                <th>Location <span class="icon-arrow">&UpArrow;</span></th>
-                <th>Date Connect <span class="icon-arrow">&UpArrow;</span></th>
-                <th>Status <span class="icon-arrow">&UpArrow;</span></th>
-                <th>Control <span class="icon-arrow">&UpArrow;</span></th>
+                <!-- <th>Id</th> -->
+                <th>Devices name</th>
+                <th>Type</th>
+                <th>Devices Unit</th>
+                <th>MAC address</th>
+                <th>Status</th>
+                <th>Control</th>
               </tr>
             </thead>
             <tbody>
@@ -260,10 +287,11 @@
             data.forEach((item) => {
               const row = document.createElement('tr');
               row.innerHTML = `
-                        <td>${item.id}</td>
                         <td>${item.name}</td>
-                        <td>${item.location}</td>
-                        <td>${item.date}</td>
+                        <td>${item.type}</td>
+
+                        <td>${item.unit}</td>
+                        <td>${item.mac}</td>
                         <td>
                             <p class="status ${item.status.toLowerCase()}">${
                 item.status
@@ -291,7 +319,28 @@
       document.addEventListener('DOMContentLoaded', function () {
         // Get the modal
         const modal = document.getElementById('addDeviceModal');
+        const deviceTypeSelect = document.getElementById('deviceType');
 
+        // Get the MAC address input field
+        const deviceUnitField = document.getElementById('deviceUnit');
+
+        // Function to toggle visibility of the MAC address input field
+
+        function toggleUnitVisibly() {
+          // Show the MAC address input field if the selected type is sensor
+          if (deviceTypeSelect.value === 'Sensor') {
+            deviceUnitField.parentElement.style.display = 'block';
+            deviceUnitField.required = true;
+          } else {
+            deviceUnitField.parentElement.style.display = 'none';
+            deviceUnitField.required = false;
+          }
+        }
+        // Initially toggle visibility based on selected type
+        toggleUnitVisibly();
+
+        // Listen for changes in the device type select
+        deviceTypeSelect.addEventListener('change', toggleUnitVisibly);
         // Get the button that opens the modal
         const btn = document.getElementById('addDeviceBtn');
 
@@ -332,12 +381,14 @@
         function addDeviceToTable(device) {
           const tbody = document.querySelector('tbody');
           const row = document.createElement('tr');
-          const status = device.deviceStatus; // Corrected to extract device status from form data
+          const type = device.deviceType;
+          const status = 'Active'; // Corrected to extract device status from form data
           row.innerHTML = `
-    <td>${device.deviceId}</td>
     <td>${device.deviceName}</td>
-    <td>${device.deviceLocation}</td>
-    <td>${device.deviceDate}</td>
+    <td>${type}</td>
+    <td>${device.deviceUnit}</td>
+    <td>${device.deviceMacAddress}</td>
+
     <td>
       <p class="status ${status.toLowerCase()}">${status}</p>
     </td>
