@@ -65,9 +65,7 @@
         </i>
         <a
           href="#"
-          class="nav-link"
-          >Back to config</a
-        >
+          class="nav-link"></a>
         <form action="#">
           <div class="form-input">
             <input
@@ -116,20 +114,23 @@
                   <p class="text-title-small">Wifi Details</p>
                   <p>Choose Wifi and fill password.</p>
                 </div>
-                <div class="max-w-sm mx-auto">
-                  <label
-                    for="wifi"
-                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                    Wifi:
-                  </label>
-                  <select
-                    id="wifiSelect"
-                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                    <option selected>Choose a wifi</option>
-                  </select>
-                </div>
+
                 <div class="responsive-lv1">
                   <div class="form-lv1">
+                    <div class="md-col-span-5">
+                      <label
+                        for="wifi"
+                        class="wifi-select">
+                        Wifi:
+                      </label>
+                      <select
+                        required
+                        name="wifiSelect"
+                        id="wifiSelect"
+                        class="content-select-wifi">
+                        <!-- <option selected>Choose a wifi</option> -->
+                      </select>
+                    </div>
                     <div class="md-col-span-5">
                       <label for="email">Password</label>
                       <input
@@ -142,7 +143,11 @@
                     </div>
 
                     <div class="md-col-span-5 text-right flex-between">
-                      <a href="./new-config.html">Connect to new Wifi</a>
+                      <a
+                        class="nav-link"
+                        href="./new-config.html"
+                        >Connect to new Wifi</a
+                      >
 
                       <div class="form-wifi-config-button-css-position">
                         <button

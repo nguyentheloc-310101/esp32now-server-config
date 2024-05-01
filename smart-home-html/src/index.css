@@ -196,11 +196,11 @@ body {
   cursor: pointer;
   color: var(--dark);
 }
-#content nav .nav-link {
-  font-size: 16px;
+.nav-link {
+  /* font-size: 14px; */
   transition: 0.3s ease;
 }
-#content nav .nav-link:hover {
+.nav-link:hover {
   color: var(--blue);
 }
 #content nav form {
@@ -631,7 +631,7 @@ body {
 }
 .input-form-item {
   padding-left: 1rem;
-  border-color: #a49b9b;
+  border-color: #d1d5db;
   padding-right: 1rem;
   margin-top: 0.25rem;
   border-radius: 0.25rem;
@@ -646,7 +646,7 @@ body {
   align-items: center;
   border-radius: 0.25rem;
   border-width: 1px;
-  border-color: #e5e7eb;
+  border-color: #d1d5db;
   height: 2.5rem;
   background-color: #f9fafb;
 }

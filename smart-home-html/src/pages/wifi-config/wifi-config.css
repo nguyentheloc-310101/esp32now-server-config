@@ -1,0 +1,23 @@
+.max-w-sm {
+  max-width: 24rem;
+}
+.wifi-select {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+  color: #111827;
+}
+.content-select-wifi {
+  display: block;
+  padding: 0.625rem;
+  border-radius: 0.5rem;
+  border-width: 1px;
+  border-color: #d1d5db;
+  width: 100%;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: #111827;
+  background-color: #f9fafb;
+}
