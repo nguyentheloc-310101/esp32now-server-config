@@ -754,3 +754,8 @@ body {
 .button-primary:focus {
   background-color: #529de8;
 }
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

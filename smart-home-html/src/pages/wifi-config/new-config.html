@@ -5,7 +5,7 @@
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0" />
-    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <link
       rel="stylesheet"
       href="../../index.css" />
@@ -108,28 +108,28 @@
         <form class="container-lv1">
           <div>
             <h2 class="title-big">ESP32 Wifi configuration</h2>
-            <p class="sub-big-title">Information of your Wifi.</p>
+            <p class="sub-big-title">Information of your wifi.</p>
 
             <div class="bg-form-input">
               <div class="bg-form-input-lv1">
                 <div class="text-gray-600">
                   <p class="text-title-small">Wifi Details</p>
-                  <p>Choose Wifi and fill password.</p>
+                  <p>Please fill out all the fields.</p>
                 </div>
-                <div class="max-w-sm mx-auto">
-                  <label
-                    for="wifi"
-                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                    Wifi:
-                  </label>
-                  <select
-                    id="wifiSelect"
-                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                    <option selected>Choose a wifi</option>
-                  </select>
-                </div>
+
                 <div class="responsive-lv1">
                   <div class="form-lv1">
+                    <div class="md-col-span-5">
+                      <label for="full_name">SSID</label>
+                      <input
+                        required
+                        type="text"
+                        id="ssid"
+                        name="ssid"
+                        placeholder="Fill your SSID"
+                        class="input-form-item" />
+                    </div>
+
                     <div class="md-col-span-5">
                       <label for="email">Password</label>
                       <input
@@ -141,14 +141,35 @@
                         placeholder="Fill your Password" />
                     </div>
 
-                    <div class="md-col-span-5 text-right flex-between">
-                      <a href="./new-config.html">Connect to new Wifi</a>
+                    <div class="md-col-span-3">
+                      <label for="address">IP address</label>
+                      <input
+                        required
+                        type="text"
+                        id="ip"
+                        name="ip"
+                        placeholder="IP address: 192.168.1.200"
+                        class="input-form-item" />
+                    </div>
 
+                    <div class="md-col-span-2">
+                      <label for="city">Gateway address</label>
+                      <input
+                        required
+                        type="text"
+                        id="gateway"
+                        class="input-form-item"
+                        name="gateway"
+                        placeholder="Gateway address: 192.168.1.1" />
+                    </div>
+
+                    <div class="md-col-span-5 text-right flex-between">
+                      <a href="./wifi-config.html">Go back</a>
                       <div class="form-wifi-config-button-css-position">
                         <button
                           class="button-primary"
                           type="submit">
-                          Connect
+                          Submit
                         </button>
                       </div>
                     </div>
@@ -166,22 +187,5 @@
 
     <script src="../../index.js"></script>
     <script src="wifi-config.js"></script>
-    <script>
-      // Fetch the JSON data
-      fetch('wifi-config.json')
-        .then((response) => response.json())
-        .then((data) => {
-          const select = document.getElementById('wifiSelect');
-
-          // Populate select options from JSON data
-          data.forEach((wifi) => {
-            const option = document.createElement('option');
-            option.value = wifi.name;
-            option.text = wifi.name;
-            select.appendChild(option);
-          });
-        })
-        .catch((error) => console.error('Error fetching data:', error));
-    </script>
   </body>
 </html>
