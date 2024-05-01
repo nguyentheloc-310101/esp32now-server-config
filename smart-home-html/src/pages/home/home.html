@@ -137,7 +137,7 @@
               class="bx icon-statistic"
               src="../../../public/icons/bx-temp.svg" />
             <span class="text">
-              <h3>10</h3>
+              <h3 id="temperature"></h3>
               <p>Temperature (°C)</p>
             </span>
           </li>
@@ -146,7 +146,7 @@
               class="bx icon-statistic"
               src="../../../public/icons/bx-humid.svg" />
             <span class="text">
-              <h3>34</h3>
+              <h3 id="humidity"></h3>
               <p>Humidity (%)</p>
             </span>
           </li>
@@ -157,7 +157,7 @@
                 src="../../../public/icons//co2-icon.svg"
             /></i>
             <span class="text">
-              <h3>543</h3>
+              <h3 id="co2"></h3>
               <p>Carbon dioxide (ppm)</p>
             </span>
           </li>
@@ -168,8 +168,8 @@
                 src="../../../public/icons/bxs-battery-charging.svg"
             /></i>
             <span class="text">
-              <h3>250 Kw</h3>
-              <p>cost: 2000$</p>
+              <h3 id="powerConsumption"></h3>
+              <p>cost: <span id="cost"></span></p>
             </span>
           </li>
         </ul>
@@ -280,5 +280,20 @@
 
     <script src="../../index.js"></script>
     <script src="home.js"></script>
+    <script>
+      // Fetch the JSON data
+      fetch('home.json')
+        .then((response) => response.json())
+        .then((data) => {
+          // Update HTML elements with JSON data
+          document.getElementById('temperature').textContent = data.temperature;
+          document.getElementById('humidity').textContent = data.humidity;
+          document.getElementById('co2').textContent = data.co2;
+          document.getElementById('powerConsumption').textContent =
+            data.powerConsumption + ' Kw';
+          document.getElementById('cost').textContent = data.cost + ' $';
+        })
+        .catch((error) => console.error('Error fetching data:', error));
+    </script>
   </body>
 </html>
