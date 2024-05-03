@@ -3,5 +3,7 @@
   "temperature": 45,
   "co2": 44,
   "powerConsumption": 240,
-  "cost": 2400
+  "cost": 2400,
+  "device1": "ON",
+  "device2": "OFF"
 }
