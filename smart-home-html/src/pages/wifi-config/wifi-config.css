@@ -21,3 +21,61 @@
   color: #111827;
   background-color: #f9fafb;
 }
+.container-lv1 {
+  min-width: 1024px;
+}
+.wifi-name {
+  color: blue;
+  cursor: pointer;
+}
+.wifi-name:hover {
+  color: rgb(72, 72, 219);
+}
+.container-vs2 {
+  display: flex;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  justify-content: center;
+  align-items: center;
+}
+.container-lv1-vs2 {
+  overflow: hidden;
+  border-radius: 1.5rem;
+  width: 100%;
+  color: #6b7280;
+  background-color: white;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+.img-wifi-config {
+  display: none;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  width: 50%;
+  background-color: #6366f1;
+}
+.header-vs2-wifi-config {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+  width: 100%;
+}
+.title-vs2-form-wifi-config {
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .img-wifi-config {
+    display: block;
+  }
+  .header-vs2-wifi-config {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    width: 50%;
+  }
+}

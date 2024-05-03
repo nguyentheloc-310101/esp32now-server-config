@@ -5,7 +5,7 @@
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0" />
-    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <link
       rel="stylesheet"
       href="../../index.css" />
@@ -85,18 +85,43 @@
 
       <!-- MAIN -->
       <main>
-        <form class="container-lv1">
-          <div>
-            <h2 class="title-big">ESP32 Wifi configuration</h2>
-            <p class="sub-big-title">Information of your Wifi.</p>
-
-            <div class="bg-form-input">
-              <div class="bg-form-input-lv1">
-                <div class="text-gray-600">
-                  <p class="text-title-small">Wifi Details</p>
-                  <p>Choose Wifi and fill password.</p>
+        <div class="head-title">
+          <div class="left">
+            <h1>Wifi Configuration</h1>
+            <ul class="breadcrumb">
+              <li>
+                <a href="../home/home.html">Dashboard</a>
+              </li>
+              <li>
+                <i class="bx bx-chevron-right">
+                  <img
+                    class="bx sidebar-icon"
+                    src="../../../public/icons/bx-chevron-right.svg"
+                /></i>
+              </li>
+              <li>
+                <a
+                  class="active"
+                  href="#"
+                  >Wifi Configuration</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <form class="container-vs2">
+          <div
+            class="container-lv1-vs2"
+            style="max-width: 1000px">
+            <div class="md:flex w-full">
+              <div class="img-wifi-config">
+                <img src="../../../public/icons/wifi-config.svg" />
+              </div>
+              <div class="header-vs2-wifi-config">
+                <div class="title-vs2-form-wifi-config">
+                  <h2 class="title-big">ESP32 config WiFi</h2>
+                  <p class="sub-big-title">Wifi Manager.</p>
                 </div>
-
                 <div class="responsive-lv1">
                   <div class="form-lv1">
                     <div class="md-col-span-5">
@@ -109,9 +134,7 @@
                         required
                         name="wifiSelect"
                         id="wifiSelect"
-                        class="content-select-wifi">
-                        <!-- <option selected>Choose a wifi</option> -->
-                      </select>
+                        class="content-select-wifi"></select>
                     </div>
                     <div class="md-col-span-5">
                       <label for="email">Password</label>
@@ -124,13 +147,22 @@
                         placeholder="Fill your Password" />
                     </div>
 
-                    <div class="md-col-span-5 text-right flex-between">
-                      <a
-                        class="nav-link"
-                        href="./new-config.html"
-                        >Connect to new Wifi</a
-                      >
-
+                    <div class="md-col-span-5 text-left flex-between">
+                      <div>
+                        <p
+                          class="nav-link"
+                          id="scan-wifi">
+                          Scan WiFi's
+                        </p>
+                        <p>
+                          Connected to:
+                          <span
+                            class="wifi-name"
+                            id="wifi-name"
+                            >The coffee house</span
+                          >
+                        </p>
+                      </div>
                       <div class="form-wifi-config-button-css-position">
                         <button
                           class="button-primary"
@@ -145,6 +177,70 @@
             </div>
           </div>
         </form>
+        <!-- <form class="container-lv1">
+          <div>
+            <h2 class="title-big">ESP32 Wifi configuration</h2>
+            <p class="sub-big-title">Information of your Wifi.</p>
+            <div class="bg-form-input">
+              <div class="bg-form-input-lv1">
+                <div class="text-gray-600">
+                  <p class="text-title-small">Wifi Details</p>
+                  <p>
+                    Connected to:
+                    <span
+                      class="wifi-name"
+                      id="wifi-name"
+                      >The coffee house</span
+                    >
+                  </p>
+                </div>
+
+                <div class="responsive-lv1">
+                  <div class="form-lv1">
+                    <div class="md-col-span-5">
+                      <label
+                        for="wifi"
+                        class="wifi-select">
+                        Wifi:
+                      </label>
+                      <select
+                        required
+                        name="wifiSelect"
+                        id="wifiSelect"
+                        class="content-select-wifi"></select>
+                    </div>
+                    <div class="md-col-span-5">
+                      <label for="email">Password</label>
+                      <input
+                        required
+                        type="password"
+                        name="pass"
+                        id="pass"
+                        class="input-form-item"
+                        placeholder="Fill your Password" />
+                    </div>
+
+                    <div class="md-col-span-5 text-right flex-between">
+                      <p
+                        class="nav-link"
+                        id="scan-wifi">
+                        Scan WiFi's
+                      </p>
+
+                      <div class="form-wifi-config-button-css-position">
+                        <button
+                          class="button-primary"
+                          type="submit">
+                          Connect
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form> -->
         <!-- </div> -->
       </main>
       <!-- MAIN -->
@@ -155,20 +251,62 @@
     <script src="wifi-config.js"></script>
     <script>
       // Fetch the JSON data
-      fetch('wifi-config.json')
-        .then((response) => response.json())
-        .then((data) => {
-          const select = document.getElementById('wifiSelect');
+      const wifiSelectElement = document.getElementById('wifiSelect');
+      const wifiNameElement = document.getElementById('wifi-name');
+      const scanWifiElement = document.getElementById('scan-wifi');
+      const loadingIndicator = document.createElement('div');
+      loadingIndicator.classList.add('loading-indicator');
+      loadingIndicator.innerHTML = 'Loading...';
 
-          // Populate select options from JSON data
-          data.forEach((wifi) => {
-            const option = document.createElement('option');
-            option.value = wifi.name;
-            option.text = wifi.name;
-            select.appendChild(option);
-          });
-        })
-        .catch((error) => console.error('Error fetching data:', error));
+      // Fetch the JSON data
+      function fetchWifiData() {
+        // Show the loading indicator
+        scanWifiElement.appendChild(loadingIndicator);
+
+        // Simulate a delay of 3 seconds
+        setTimeout(() => {
+          fetch('wifi-config.json')
+            .then((response) => response.json())
+            .then((data) => {
+              // Populate select options from JSON data
+              populateWifiOptions(data.listWifi);
+
+              // Set the initially connected WiFi name
+              wifiNameElement.textContent = data.connected.name;
+
+              // Hide the loading indicator
+              scanWifiElement.removeChild(loadingIndicator);
+            })
+            .catch((error) => {
+              console.error('Error fetching data:', error);
+              // Hide the loading indicator
+              scanWifiElement.removeChild(loadingIndicator);
+            });
+        }, 2000);
+      }
+
+      function populateWifiOptions(data) {
+        const select = document.getElementById('wifiSelect');
+        select.innerHTML = '';
+
+        data.forEach((wifi) => {
+          const option = document.createElement('option');
+          option.value = wifi.name;
+          option.text = wifi.name;
+          select.appendChild(option);
+        });
+      }
+
+      function updateConnectedWifi() {
+        const selectedWifi = wifiSelectElement.value;
+        wifiNameElement.textContent = selectedWifi;
+      }
+
+      scanWifiElement.addEventListener('click', fetchWifiData);
+      wifiSelectElement.addEventListener('change', updateConnectedWifi);
+
+      // Initial fetch of WiFi data
+      fetchWifiData();
     </script>
   </body>
 </html>

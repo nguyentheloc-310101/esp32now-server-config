@@ -198,6 +198,8 @@ body {
 }
 .nav-link {
   /* font-size: 14px; */
+  color: blue !important;
+  cursor: pointer;
   transition: 0.3s ease;
 }
 .nav-link:hover {
@@ -582,9 +584,7 @@ body {
   min-height: 100vh;
   background-color: #f3f4f6;
 }
-.container-lv1 {
-  max-width: 1024px;
-}
+
 .title-big {
   font-size: 1.25rem;
   line-height: 1.75rem;
@@ -718,6 +718,7 @@ body {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
   .responsive-lv1 {
+    /* width: 100%; */
     grid-column: span 2 / span 2;
   }
 }
