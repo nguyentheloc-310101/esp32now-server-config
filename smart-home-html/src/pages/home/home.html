@@ -191,11 +191,13 @@
                         ">
                         <img
                           class="bx icon-statistic"
-                          src="../../../public/icons/bx-bulb.svg" />
+                          src="../../../public/icons/bulb.svg" />
                       </div>
                     </div>
 
-                    <div class="status-device1"></div>
+                    <div
+                      class="status-device"
+                      id="status-device1"></div>
                   </div>
                   <div class="Frame167">
                     <div
@@ -246,17 +248,19 @@
                         ">
                         <img
                           class="bx icon-statistic"
-                          src="../../../public/icons/bx-bulb.svg" />
+                          src="../../../public/icons/fan.svg" />
                       </div>
                     </div>
 
-                    <div class="status-device2"></div>
+                    <div
+                      class="status-device"
+                      id="status-device2"></div>
                   </div>
                   <div class="Frame167">
                     <div
                       class="CentralLight"
                       style="color: #272727; font-size: 18px">
-                      Light Bulb
+                      Fan
                     </div>
                     <label
                       class="switch"
@@ -291,6 +295,7 @@
     <script src="home.js"></script>
     <script>
       // Fetch the JSON data
+      // Fetch the JSON data
       fetch('home.json')
         .then((response) => response.json())
         .then((data) => {
@@ -307,9 +312,9 @@
           const statusDevice2 = data.device2;
 
           const statusDevice1Element =
-            document.querySelector('.status-device1');
+            document.getElementById('status-device1');
           const statusDevice2Element =
-            document.querySelector('.status-device2');
+            document.getElementById('status-device2');
 
           statusDevice1Element.textContent = statusDevice1;
           statusDevice2Element.textContent = statusDevice2;
@@ -336,8 +341,8 @@
           const isChecked = this.checked;
 
           // Tìm phần tử hiển thị trạng thái thiết bị gần nhất
-          const statusElement = this.closest('.card-home-device').querySelector(
-            `.status-device${index + 1}`
+          const statusElement = document.getElementById(
+            `status-device${index + 1}`
           );
 
           // Cập nhật trạng thái thiết bị dựa trên trạng thái của công tắc
