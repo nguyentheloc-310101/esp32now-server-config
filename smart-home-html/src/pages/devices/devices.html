@@ -233,7 +233,49 @@
     <script>
       document.addEventListener('DOMContentLoaded', function () {
         const tbody = document.querySelector('tbody');
+        // Function to fetch data and update table
+        function fetchDataAndUpdateTable() {
+          console.log('Fetching data successfully');
+          fetch('data.json')
+            .then((response) => response.json())
+            .then((data) => {
+              tbody.innerHTML = ''; // Clear existing table rows
+              data.forEach((item) => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                        <td>${item.name}</td>
+                        <td>${item.type}</td>
+                        <td>${item.unit}</td>
+                        <td>${item.mac}</td>
+                        <td>
+                            <p class="status ${item.status.toLowerCase()}">${
+                  item.status
+                }</p>
+                        </td>
+                        <td>
+                            <div class="toggle-switch">
+                                <input type="checkbox" class="toggle-input" id="toggle-${
+                                  item.id
+                                }" ${item.status === 'Active' ? 'checked' : ''}>
+                                <label for="toggle-${
+                                  item.id
+                                }" class="toggle-label"></label>
+                            </div>
+                        </td>
+                    `;
+                tbody.appendChild(row);
+              });
+            })
+            .catch((error) => {
+              console.error('Error loading data:', error);
+            });
+        }
 
+        // Initial fetch
+        fetchDataAndUpdateTable();
+
+        // Fetch data every 30 seconds
+        setInterval(fetchDataAndUpdateTable, 30000);
         // Event listener for toggle switches using event delegation
         tbody.addEventListener('change', function (event) {
           if (event.target.classList.contains('toggle-input')) {
@@ -312,6 +354,7 @@
             console.error('Error loading data:', error);
           });
       });
+      setInterval(fetchDataAndUpdateTable, 30000);
       //Add New Devices
       document.addEventListener('DOMContentLoaded', function () {
         // Get the modal
