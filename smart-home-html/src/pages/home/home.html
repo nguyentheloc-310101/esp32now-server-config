@@ -197,6 +197,12 @@
                     <label
                       class="switch"
                       id="switch1">
+                      <input type="checkbox" />
+                      <span class="slider"></span>
+                    </label>
+                    <!-- <label
+                      class="switch"
+                      id="switch1">
                       <input
                         class="cb"
                         type="checkbox" />
@@ -204,7 +210,7 @@
                         <span class="left">off</span>
                         <span class="right">on</span>
                       </span>
-                    </label>
+                    </label> -->
                   </div>
                 </div>
                 <div class="card-home-device">
@@ -254,6 +260,12 @@
                     <label
                       class="switch"
                       id="switch2">
+                      <input type="checkbox" />
+                      <span class="slider"></span>
+                    </label>
+                    <!-- <label
+                      class="switch"
+                      id="switch2">
                       <input
                         class="cb"
                         type="checkbox" />
@@ -261,7 +273,7 @@
                         <span class="left">off</span>
                         <span class="right">on</span>
                       </span>
-                    </label>
+                    </label> -->
                   </div>
                 </div>
               </div>
@@ -339,6 +351,7 @@
             .querySelector('.cb');
 
           switchDevice1.checked = statusDevice1 === 'ON';
+
           switchDevice2.checked = statusDevice2 === 'ON';
         })
         .catch((error) => console.error('Error fetching data:', error));

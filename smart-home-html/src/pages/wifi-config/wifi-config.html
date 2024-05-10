@@ -120,7 +120,16 @@
               <div class="header-vs2-wifi-config">
                 <div class="title-vs2-form-wifi-config">
                   <h2 class="title-big">ESP32 config WiFi</h2>
-                  <p class="sub-big-title">Wifi Manager</p>
+                  <!-- <p class="sub-big-title">Wifi Manager</p> -->
+                  <div class="container-wifi-select">
+                    <p class="style-connected-to">
+                      <span class="dot-wifi"></span>
+                      Connected to:
+                      <span
+                        class="text-name-wifi"
+                        id="wifi-name"></span>
+                    </p>
+                  </div>
                 </div>
                 <div class="responsive-lv1">
                   <div class="form-lv1">
@@ -145,24 +154,22 @@
                         id="pass"
                         class="input-form-item"
                         placeholder="Fill your Password" />
+                      <div class="checkBoxPass">
+                        <input
+                          type="checkbox"
+                          onclick="myFunctionToggleHidePassword()" />Show
+                        Password
+                      </div>
                     </div>
 
                     <div class="md-col-span-5 text-left flex-between">
-                      <div>
-                        <p
-                          class="nav-link"
-                          id="scan-wifi">
-                          Scan WiFi's
-                        </p>
-                        <p>
-                          Connected to:
-                          <span
-                            class="wifi-name"
-                            id="wifi-name"
-                            >The coffee house</span
-                          >
-                        </p>
-                      </div>
+                      <button
+                        type="button"
+                        class="button-scan-wifi"
+                        id="scan-wifi">
+                        Scan WiFi
+                      </button>
+                      <div></div>
                       <div class="form-wifi-config-button-css-position">
                         <button
                           class="button-primary"
@@ -256,8 +263,15 @@
       const scanWifiElement = document.getElementById('scan-wifi');
       const loadingIndicator = document.createElement('div');
       loadingIndicator.classList.add('loading-indicator');
-      loadingIndicator.innerHTML = 'Loading...';
-
+      loadingIndicator.innerHTML = '';
+      function myFunctionToggleHidePassword() {
+        var x = document.getElementById('pass');
+        if (x.type === 'password') {
+          x.type = 'text';
+        } else {
+          x.type = 'password';
+        }
+      }
       // Fetch the JSON data
       function fetchWifiData() {
         // Show the loading indicator
@@ -278,7 +292,7 @@
               scanWifiElement.removeChild(loadingIndicator);
             })
             .catch((error) => {
-              console.error('Error fetching data:', error);
+              alert('Error fetching data:', error);
               // Hide the loading indicator
               scanWifiElement.removeChild(loadingIndicator);
             });

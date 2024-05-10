@@ -62,12 +62,74 @@
   padding-left: 1.25rem;
   padding-right: 1.25rem;
   padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
+  /* padding-bottom: 2.5rem; */
   width: 100%;
 }
 .title-vs2-form-wifi-config {
   margin-bottom: 2.5rem;
   text-align: center;
+}
+.checkBoxPass {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin-top: 8px;
+  gap: 8px;
+}
+.text-name-wifi {
+  font-weight: 700;
+}
+.style-connected-to {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: #e2e2e2;
+  border-radius: 12px;
+  width: fit-content;
+  color: #848686;
+  font-weight: 500;
+  font-size: 14px;
+  padding: 1px 18px;
+}
+.dot-wifi {
+  height: 8px;
+  width: 8px;
+  background-color: #0ceb23;
+  border-radius: 50%;
+  display: inline-block;
+}
+.container-wifi-select {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 8px;
+}
+
+/* CSS */
+.button-scan-wifi {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 6px 14px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+  border-radius: 6px;
+  border: none;
+
+  background: #6e6d70;
+  box-shadow: 0px 0.5px 1px rgba(0, 0, 0, 0.1),
+    inset 0px 0.5px 0.5px rgba(255, 255, 255, 0.5),
+    0px 0px 0px 0.5px rgba(0, 0, 0, 0.12);
+  color: #dfdedf;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-scan-wifi:focus {
+  box-shadow: inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2),
+    0px 0.5px 1px rgba(0, 0, 0, 0.1), 0px 0px 0px 3.5px rgba(58, 108, 217, 0.5);
+  outline: 0;
 }
 @media (min-width: 768px) {
   .img-wifi-config {
