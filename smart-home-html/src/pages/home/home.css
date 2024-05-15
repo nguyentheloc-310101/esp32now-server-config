@@ -88,7 +88,7 @@
   position: absolute;
   cursor: pointer;
   inset: 0;
-  background: #d4acfb;
+  background: #929ba3;
   border-radius: 50px;
   transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
 }
@@ -107,11 +107,11 @@
 }
 
 .switch input:checked + .slider {
-  background: #b84fce;
+  background: #2396ef;
 }
 
 .switch input:focus + .slider {
-  box-shadow: 0 0 1px #b84fce;
+  box-shadow: 0 0 1px #2396ef;
 }
 
 .switch input:checked + .slider:before {
