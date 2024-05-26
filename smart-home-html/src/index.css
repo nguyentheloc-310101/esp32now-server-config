@@ -692,6 +692,7 @@ body {
   text-align: right;
 }
 .form-wifi-config-button-css-position {
+  margin-bottom: 4px;
   display: inline-flex;
   align-items: flex-end;
 }

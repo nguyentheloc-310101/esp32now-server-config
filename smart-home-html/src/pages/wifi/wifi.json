@@ -2,38 +2,31 @@
   "listWifi": [
     {
       "IP": "127.0.0.1",
-      "MAC": "DE:AD:BE:EF:00:01",
       "name": "Wifi Sensor",
       "password": "12345678",
       "gatewayAddress": "192.168.1.1"
     },
     {
       "IP": "127.0.0.1",
-      "MAC": "DE:AD:BE:EF:00:01",
       "name": "Wifi 2",
       "password": "12345678",
       "gatewayAddress": "192.168.1.1"
     },
     {
       "IP": "127.0.0.1",
-      "MAC": "DE:AD:BE:EF:00:01",
       "name": "Wifi 3",
       "password": "12345678",
       "gatewayAddress": "192.168.1.1"
     },
     {
       "IP": "127.0.0.1",
-      "MAC": "DE:AD:BE:EF:00:01",
       "name": "Wifi 4",
       "password": "12345678",
       "gatewayAddress": "192.168.1.1"
     }
   ],
   "connected": {
-    "IP": "127.0.0.1",
-    "MAC": "DE:AD:BE:EF:00:01",
-    "name": "Wifi 4",
-    "password": "12345678",
-    "gatewayAddress": "192.168.1.1"
+    "name": "",
+    "password": ""
   }
 }

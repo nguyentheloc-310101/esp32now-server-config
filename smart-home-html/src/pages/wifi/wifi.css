@@ -49,6 +49,13 @@
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
     0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
+.img-cover {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 280px;
+  width: auto;
+}
 .img-wifi-config {
   display: none;
   padding-top: 2.5rem;
@@ -131,9 +138,15 @@
     0px 0.5px 1px rgba(0, 0, 0, 0.1), 0px 0px 0px 3.5px rgba(58, 108, 217, 0.5);
   outline: 0;
 }
+.md-flex-w-full {
+  width: 100%;
+}
 @media (min-width: 768px) {
   .img-wifi-config {
     display: block;
+  }
+  .md-flex-w-full {
+    display: flex;
   }
   .header-vs2-wifi-config {
     padding-left: 2.5rem;

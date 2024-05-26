@@ -5,13 +5,13 @@
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!--  -->
     <link
       rel="stylesheet"
       href="../../index.css" />
     <link
       rel="stylesheet"
-      href="wifi-config.css" />
+      href="wifi.css" />
     <title>Smart Home</title>
   </head>
   <body>
@@ -30,7 +30,7 @@
           <a href="../home/home.html">
             <img
               class="bx sidebar-icon"
-              src="../../../public/icons/bxs-dashboard.svg" />
+              src="../../../public/icons/d.svg" />
             <span class="text">Dashboard</span>
           </a>
         </li>
@@ -38,15 +38,15 @@
           <a href="../devices/devices.html">
             <img
               class="bx sidebar-icon"
-              src="../../../public/icons/bx-devices.svg" />
+              src="../../../public/icons/de.svg" />
             <span class="text">Devices</span>
           </a>
         </li>
         <li class="active">
-          <a href="../wifi-config/wifi-config.html">
+          <a href="..wifiwifi-config.html">
             <img
               class="bx sidebar-icon"
-              src="../../../public/icons/bx-wifi.svg" />
+              src="../../../public/icons/wi.svg" />
             <span class="text">Wifi configuration</span>
           </a>
         </li>
@@ -61,7 +61,7 @@
         <i class="bx bx-menu">
           <img
             class="bx sidebar-icon"
-            src="../../../public/icons/bx-menu.svg" />
+            src="../../../public/icons/me.svg" />
         </i>
         <a
           href="#"
@@ -76,7 +76,7 @@
               class="search-btn">
               <img
                 class="bx sidebar-icon"
-                src="../../../public/icons/bx-search.svg" />
+                src="../../../public/icons/s.svg" />
             </button>
           </div>
         </form>
@@ -96,7 +96,7 @@
                 <i class="bx bx-chevron-right">
                   <img
                     class="bx sidebar-icon"
-                    src="../../../public/icons/bx-chevron-right.svg"
+                    src="../../../public/icons/ar.svg"
                 /></i>
               </li>
               <li>
@@ -113,9 +113,11 @@
           <div
             class="container-lv1-vs2"
             style="max-width: 1000px">
-            <div class="md:flex w-full">
+            <div class="md-flex-w-full">
               <div class="img-wifi-config">
-                <img src="../../../public/icons/wifi-config.svg" />
+                <img
+                  class="img-cover"
+                  src="../../../public/icons/wc.svg" />
               </div>
               <div class="header-vs2-wifi-config">
                 <div class="title-vs2-form-wifi-config">
@@ -255,7 +257,6 @@
     <!-- CONTENT -->
 
     <script src="../../index.js"></script>
-    <script src="wifi-config.js"></script>
     <script>
       // Fetch the JSON data
       const wifiSelectElement = document.getElementById('wifiSelect');
@@ -279,7 +280,7 @@
 
         // Simulate a delay of 3 seconds
         setTimeout(() => {
-          fetch('wifi-config.json')
+          fetch('wifi.json')
             .then((response) => response.json())
             .then((data) => {
               // Populate select options from JSON data
